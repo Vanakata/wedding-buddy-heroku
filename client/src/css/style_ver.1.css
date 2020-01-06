@@ -1,0 +1,675 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 400px) {
+    body {
+        background-image: url("../images/mobile.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #root {
+        flex-wrap: wrap;
+    }
+    .App {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .background-image {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 80px;
+    }
+    a {
+        text-decoration: none;
+        color: whitesmoke
+    }
+    a:hover {
+        display: inline;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        color: lightseagreen;
+    }
+    ul {
+        list-style-type: none;
+    }
+    ::placeholder {
+        color: black bold;
+        position: relative;
+        left: 16%;
+    }
+    .button {
+        height: 30px;
+        width: 100px;
+        border-radius: 25px;
+        background-color: whitesmoke;
+        cursor: pointer;
+    }
+    #header {
+        position: absolute;
+        top: 1%;
+    }
+    #navigation-container {
+        position: absolute;
+        right: 50%;
+    }
+    #navigation-container, ul, li {
+        display: inline;
+        float: right;
+        padding-top: 30px;
+        padding-right: 10px;
+        padding-left: 5px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 10px;
+        position: relative;
+        left: -1%;
+    }
+    #greeting-message {
+        position: absolute;
+        left: 10%;
+        font-family: 'Great Vibes', cursive;
+        font-size: 20px;
+    }
+    #login-container {
+        height: 150px;
+        width: 400px;
+        position: absolute;
+        left: 25%;
+        top: 30%;
+        background-color: transparent;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 15px;
+    }
+    #login-container h1 {
+        position: relative;
+        left: 35%;
+        top: 10%;
+        color: black;
+        font-size: 20px;
+    }
+    #login-container div {
+        position: relative;
+        padding-top: 10%;
+        padding-left: 10%;
+    }
+    #login-container input.button {
+        position: relative;
+        left: 15%;
+        background-color: transparent;
+        color: whitesmoke;
+    }
+    /* #login-container input.button:hover {
+        background-color: whitesmoke;
+        color: lightblue;
+    } */
+    #login-container input.loginPage {
+        border-radius: 10px;
+        height: 20px;
+        width: 180px;
+        opacity: 0.5;
+        background-color: transparent;
+        position: absolute;
+        left: 15%;
+    }
+    #login-container input.loginPage:hover {
+        opacity: 1;
+        background-color: whitesmoke;
+    }
+    #login-container label {
+        position: relative;
+        right: 10%;
+        color: black;
+    }
+    .welcome-container p {
+        color: #fad6a5;
+        font-family: 'Great Vibes', cursive;
+        font-size: 20px;
+        position: absolute;
+        top: 15%;
+        left: 30.2%;
+        padding-top: 20px;
+        ;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+    }
+}
+
+/* Tablet Styles */
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        background-image: url("../images/basket-beach-blue-coast-169196.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 80px;
+    }
+    #root {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .App {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .background-image {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 80px;
+    }
+}
+
+/* Desktop Styles 1*/
+
+@media only screen and (min-width: 961px) {
+    body {
+        background-image: url("https://images.pexels.com/photos/818649/pexels-photo-818649.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+        opacity: 0.9;
+    }
+    #root {
+        display: flex;
+        flex-wrap: wrap;
+        width: 960px;
+        margin: 0 auto;
+    }
+    .App {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .background-image {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 80px;
+    }
+    a {
+        text-decoration: none;
+        color: whitesmoke
+    }
+    a:hover {
+        display: inline;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        color: #c2b880;
+    }
+    ul {
+        list-style-type: none;
+    }
+    ::placeholder {
+        color: white;
+        position: fixed;
+        left: 11%;
+        font-size: 16px;
+    }
+    .button {
+        height: 35px;
+        width: 110px;
+        border-radius: 25px;
+        cursor: pointer;
+        background-color: transparent;
+        position: relative;
+        left: 30%;
+        top: 15%;
+        color: #c2b880;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 20px;
+    }
+    .button:hover {
+        border-color: #c2b880;
+        background-color: black;
+    }
+    #header {
+        width: 1100px;
+        position: relative;
+        top: -35%;
+        margin: auto auto;
+    }
+    #navigation ul {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 40px;
+        text-align: right;
+    }
+    #navigation li {
+        display: inline;
+        margin-right: 5px;
+        float: right;
+        padding: 10px;
+    }
+    #nav-container {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+    }
+    #greeting-message {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        font-family: 'Great Vibes', cursive;
+        font-size: 45px;
+    }
+    #login-container {
+        height: 150px;
+        width: 400px;
+        position: fixed;
+        left: 72%;
+        top: 15%;
+        background-color: transparent;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 25px;
+        color: #c2b880;
+    }
+    #login-container div {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+    #login-container label {
+        position: relative;
+        right: 8%;
+    }
+    #login-container h1 {
+        position: relative;
+        left: 10%;
+    }
+    .login-input {
+        border-radius: 10px;
+        height: 30px;
+        width: 190px;
+        background-color: transparent;
+        position: relative;
+        text-align: center;
+        font-size: 19px;
+        color: #c2b880;
+    }
+    .login-input:hover {
+        background-color: black;
+    }
+    .welcome-container {
+        font-family: 'Great Vibes', cursive;
+        font-size: 45px;
+        width: 800px;
+        align-content: center;
+    }
+    .welcome-container p {
+        position: fixed;
+        top: 10px;
+        text-align: center;
+        background-color: #c2b880;
+        color: whitesmoke;
+        width: 400px;
+        border-radius: 100px 5px;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+    }
+    .create-wedding-container {
+        height: 650px;
+        width: 400px;
+        position: fixed;
+        right: 7%;
+        top: 20%;
+        text-align: center;
+        background-color: transparent;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 25px;
+    }
+    .create-wedding-container h1, .create-guest-container h1 {
+        color: #c2b880;
+    }
+    .create-wedding {
+        height: 450px;
+        width: 400px;
+        position: absolute;
+        top: 20%;
+        color: #c2b880;
+    }
+    .create-wedding-input {
+        position: absolute;
+        left: 45%;
+        background-color: black;
+        opacity: 0.7;
+        color: whitesmoke;
+        font-size: 16px;
+        border-radius: 25px;
+        height: 30px;
+        text-align: center;
+    }
+    .create-wedding label {
+        position: relative;
+        right: 35%;
+    }
+    .create-wedding-input, .guest-names:hover {
+        background-color: #c2b880;
+    }
+    #weddings-container {
+        height: 800px;
+        width: 800px;
+        position: fixed;
+        left: 20px;
+        top: 15%;
+    }
+    #weddings-container h2 {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 50px;
+        position: fixed;
+        top: 100px;
+        left: 20px;
+        text-align: center;
+        background-color: #c2b880;
+        color: black;
+        width: 400px;
+        border-radius: 100px 5px;
+        border-color: white;
+        border-style: solid;
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Safari */
+        -khtml-user-select: none;
+        /* Konqueror HTML */
+        -moz-user-select: none;
+        /* Old versions of Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
+        /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+    }
+    .wedding {
+        border-style: solid;
+        border-color: white;
+        border-radius: 100px 5px;
+        height: max-content;
+        width: max-content;
+        display: inline-grid;
+        margin-top: 10%;
+        margin-bottom: -100%;
+        margin-right: 7%;
+        background-color: #c2b880;
+        column-fill: auto;
+    }
+    .wedding li {
+        margin-right: 45px;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 25px;
+        word-wrap: break-word;
+        margin-top: 5%;
+    }
+    .wedding :hover {
+        border-radius: 100px 5px;
+        background-color: whitesmoke;
+        cursor: pointer;
+    }
+    .wedding h5 {
+        position: relative;
+        right: 0px;
+        color: black;
+    }
+    .wedding-details img {
+        position: relative;
+        height: 50%;
+        width: 100%;
+        background-position: center;
+        align: middle;
+    }
+    .wedding-details {
+        margin: auto auto;
+        width: 700px;
+        position: fixed;
+        left: 30%;
+        top: 20%;
+        float: left;
+        color: black;
+        text-align: center;
+    }
+    .wedding-details h1 {
+        position: absolute;
+        top: 10%;
+        left: 20%;
+        font-size: 50px;
+        color: whitesmoke;
+        font-family: 'Great Vibes', cursive;
+    }
+    .wedding-details h5 {
+        position: absolute;
+        color: whitesmoke;
+        font-family: 'Great Vibes', cursive;
+        font-size: 35px;
+    }
+    #wedding-date {
+        top: 75%;
+        left: 15%;
+    }
+    #groom-name {
+        top: 55%;
+        left: 15%;
+    }
+    #bride-name {
+        top: 35%;
+        left: 15%;
+    }
+    @keyframes myAnimation {
+        0% {
+            opacity: 1;
+            transform: rotateX(90deg);
+        }
+        50% {
+            opacity: 0.5;
+            transform: rotateX(0deg);
+        }
+        100% {
+            display: none;
+            opacity: 0;
+            transform: rotateX(90deg);
+        }
+    }
+    .success-message {
+        animation-name: myAnimation;
+        animation-duration: 2000ms;
+        animation-fill-mode: forwards;
+    }
+    .success-message {
+        position: fixed;
+        left: 40%;
+        top: 5%;
+        font-size: 40px;
+    }
+    .guest-container {
+        border-style: solid;
+        border-color: white;
+        width: 700px;
+        height: 700px;
+        display: inline-grid;
+        position: fixed;
+        left: 2%;
+        top: 18%;
+        background-image: url('../images/GuestList-Background.png');
+        background-repeat: round;
+        opacity: 0.8;
+    }
+    .guest-container h3 {
+        position: relative;
+        text-align: center;
+        font-family: "Georgia", cursive;
+        font-size: 50px;
+        color: black;
+    }
+    .guests {
+        display: inline-block;
+        margin-right: 10px;
+        font-family: "Georgia", cursive;
+        font-size: 20px;
+        color: black;
+        background-attachment: fixed;
+        overflow: scroll;
+        overflow-x: hidden;
+        scrollbar-face-color: #367CD2;
+        scrollbar-shadow-color: #FFFFFF;
+        scrollbar-highlight-color: #FFFFFF;
+        scrollbar-3dlight-color: #FFFFFF;
+        scrollbar-darkshadow-color: #FFFFFF;
+        scrollbar-track-color: #FFFFFF;
+        scrollbar-arrow-color: #FFFFFF;
+    }
+    .guests::-webkit-scrollbar {
+        width: 12px;
+    }
+    /* Track */
+    .guests::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+    /* Handle */
+    .guests::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: transperant;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    .guests form {
+        position: relative;
+        top: 55px;
+        left: 30%;
+        padding-bottom: 10px;
+    }
+    .guests .button {
+        position: relative;
+        left: 35%;
+        bottom: 50px;
+    }
+    .guests #status {
+        position: relative;
+        left: 7%;
+        top: 15px;
+    }
+    .guests h5 {
+        position: relative;
+        right: 15%;
+    }
+    #status-question-container {
+        position: relative;
+        top: 5%;
+        align-items: center;
+        text-align: center;
+    }
+    #status-question {
+        font-family: "Georgia", cursive;
+        font-size: 17px;
+    }
+    #total-guests {
+        position: relative;
+        bottom: -2%;
+        left: 2%;
+    }
+    .select-box {
+        cursor: pointer;
+        position: relative;
+        left: 20%;
+        bottom: 25px;
+        color: #414141;
+        display: block;
+        font: 400 17px/2em 'Source Sans Pro', sans-serif;
+        background: transparent;
+    }
+    .select-box:hover {
+        background: black;
+    }
+    .create-guest-container {
+        width: 600px;
+        height: 300px;
+        position: fixed;
+        top: 25%;
+        left: 80%;
+        margin-top: -100px;
+        margin-left: -250px;
+    }
+    .create-guest {
+        position: relative;
+        top: 15%;
+        left: 5%;
+        color: #c2b880;
+    }
+    .create-guest .button {
+        position: relative;
+        top: 75px;
+        left: -25%;
+    }
+    .guest-names {
+        font-size: 20px;
+        background-color: black;
+        opacity: 0.7;
+        color: whitesmoke;
+        font-size: 16px;
+        border-radius: 25px;
+        height: 30px;
+        text-align: center;
+    }
+    .create-guest label {
+        font-size: 20px;
+        font-family: 'Bebas Neue', cursive;
+    }
+}
+
+/* Desktop Styles Ultra Wide Monitors*/

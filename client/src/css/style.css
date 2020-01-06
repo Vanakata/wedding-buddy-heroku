@@ -1,0 +1,673 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-attachment: fixed;
+}
+
+#root {
+    height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+.App {
+    height: 140%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+    display: flex;
+}
+
+.App:hover #nav-container {
+    display: block;
+}
+
+/* Navigation menu */
+
+#header {
+    border: 1px solid purple;
+    position: fixed;
+    top: 0px;
+    margin: auto auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+#navigation {
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 0px;
+    height: 15%;
+}
+
+#nav-container {
+    /* border: 1px solid purple; */
+    position: fixed;
+    top: 0px;
+    display: inline;
+    display: none;
+    padding: 15px;
+    text-align: right;
+    font-size: 20px;
+    height: 12%;
+}
+
+#nav-container, .wrapper-inner-tab-backgrounds, .confirm-message, .success-message, .wedding-details {
+    font-family: 'Sulphur Point', sans-serif;
+}
+
+#greeting-message, .create-guest-container {
+    font-family: 'Great Vibes', cursive;
+    color: whitesmoke;
+}
+
+.admin-navigation .wrapper-inner-tab-background {
+    width: 25%;
+}
+
+#login-container {
+    overflow: auto;
+    overflow-x: hidden;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    position: relative;
+    border-radius: 20px;
+    -webkit-animation-name: animation-container;
+    -webkit-animation: animation-container 8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animation-container 8s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes animation-container {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: rgba(0, 0, 0, .8);
+    }
+}
+
+.login-text {
+    position: relative;
+    top: 50px;
+    left: 7%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.login-text h1 {
+    position: relative;
+    left: -8%;
+    font-size: 40px;
+}
+
+.login-input {
+    position: relative;
+    margin: 20px;
+}
+
+.login-text label {
+    font-size: 30px;
+}
+
+.create-guest-button {
+    position: relative;
+    border-radius: 20px;
+    border-style: thin;
+    background-color: transparent;
+    color: whitesmoke;
+    cursor: pointer;
+    outline: none;
+}
+.login-input-btn{
+    border-radius: 20px;
+    border-style: thin;
+    background-color: transparent;
+    color: whitesmoke;
+    cursor: pointer;
+    outline: none;
+}
+
+.login-input-btn:hover, .create-guest-button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+#username-input, #password-input {
+    border-radius: 25px;
+    height: 40px;
+    background-color: transparent;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 15px;
+    outline: none;
+}
+
+#username-input:hover, #password-input:hover, .create-guest input:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.button11 {
+    position: relative;
+    left: -15%;
+}
+
+.button11 a {
+    position: relative;
+    top: 20%;
+}
+
+/* Home page user */
+
+.homepage-container {
+    width: 95%;
+    height: 80%;
+    position: fixed;
+    left: 2%;
+    top: 50%;
+    display: inline-grid;
+    text-align: center;
+}
+
+.user-page-container {
+    position: relative;
+    border-style: solid;
+    border-radius: 20px;
+    color: whitesmoke;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-animation-name: animation-container;
+    -webkit-animation: animation-container 5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animation-container 5s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.user-page-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.user-page-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.user-page-container::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: whitesmoke;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.user-page-container h1, h2, h3 {
+    font-family: 'Tangerine', cursive;
+}
+
+.user-page-container h1 {
+    font-size: 85px;
+}
+
+.couple {
+    height: 30%;
+    position: relative;
+    top: 10%;
+}
+
+.couple h2 {
+    font-size: 45px;
+}
+
+.wedding-date {
+    position: relative;
+    top: 15%;
+    height: 400px;
+}
+
+.wedding-date h2 {
+    font-size: 75px;
+}
+
+.wedding-date h3 {
+    font-size: 55px;
+}
+
+.wedding-date p {
+    font-size: 35px;
+}
+
+.couple-intro {
+    position: relative;
+    top: 110px;
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    align-content: center;
+    margin: 30px;
+}
+
+.intro {
+    display: inline-block;
+    width: 450px;
+    float: right;
+    text-align: center;
+    align-content: center;
+}
+
+.temp {
+    position: relative;
+    top: 5%;
+}
+
+.intro h3 {
+    font-size: 65px;
+}
+
+.intro p {
+    font-size: 25px;
+}
+
+.wedding-events-container {
+    /* border:1px solid red; */
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+    margin: 30px;
+}
+
+.wedding-events-container h2 {
+    font-size: 65px;
+    padding: 50px;
+}
+
+.event {
+    /* border:solid 1px yellow; */
+    position: relative;
+    display: inline;
+    text-align: center;
+    align-content: center;
+}
+
+.event h3 {
+    font-size: 55px;
+    padding-bottom: 25px;
+}
+
+.event span {
+    font-size: 30px;
+}
+
+.event p {
+    font-size: 20px;
+}
+
+#main-ceremony, #wedding-party {
+    float: left;
+}
+
+#main-ceremony h3, #wedding-party h3 {
+    border-bottom: 1px solid whitesmoke;
+}
+
+/* Create guest list */
+
+.create-guest-container {
+    /* border: 1px solid yellow; */
+    height: 550px;
+    width: fit-content;
+    position: fixed;
+    top: 15%;
+    font-size: 20px;
+    left: 32%;
+    border-radius: 20px;
+    align-items: center;
+    align-content: center;
+    -webkit-animation-name: animation-container;
+    -webkit-animation: animation-container 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animation-container 3s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.create-guest {
+    /* border: 1px solid white; */
+    position: relative;
+    height: 65%;
+    top: 10%;
+    left: 0%;
+    margin: 10px;
+    font-size: 35px;
+    color: whitesmoke;
+}
+
+.create-guest-names {
+    font-size: 30px;
+}
+
+.create-guest-button {
+    font-size: 25px;
+}
+
+.create-guest form {
+    /* border:1px solid yellow; */
+    height: 65%;
+}
+
+.guest-names {
+    position: relative;
+    border-radius: 25px;
+    height: 40px;
+    width: 80%;
+    background-color: transparent;
+    color: whitesmoke;
+    margin: 15px;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+}
+
+.success-message {
+    width: 500px;
+    font-size: 25px;
+    position: absolute;
+    left: 110%;
+    top: 4%;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 25px;
+    text-align: center;
+}
+
+/* Display guest list */
+
+.guest-container, #weddings-container, .wedding-details-container, #no-guests-message {
+    border-style: solid;
+    border-color: white;
+    border-radius: 25px;
+    width: 95%;
+    display: inline-grid;
+    position: fixed;
+    left: 2%;
+    top: 10%;
+    background-color: rgba(0, 0, 0, 8);
+    opacity: 0.8;
+}
+
+.guests {
+    display: inline-block;
+    margin-right: 10px;
+    font-family: "Georgia", cursive;
+    font-size: 20px;
+    color: whitesmoke;
+    background-attachment: fixed;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-face-color: #367CD2;
+    scrollbar-shadow-color: #FFFFFF;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-track-color: #FFFFFF;
+    scrollbar-arrow-color: #FFFFFF;
+}
+
+.guests::-webkit-scrollbar {
+    width: 12px;
+}
+
+.guests::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.guests::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: whitesmoke;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.guests form {
+    position: relative;
+    top: 55px;
+    left: 30%;
+    padding-bottom: 10px;
+}
+
+.guests .button {
+    position: relative;
+    left: 35%;
+    bottom: 50px;
+}
+
+.guests, .status {
+    position: relative;
+    left: 0%;
+    top: 15px;
+}
+
+.guests h3 {
+    position: relative;
+}
+
+.guests h5 {
+    position: relative;
+    right: 15%;
+}
+
+#guest-on-line {
+    height: fit-content;
+    border-bottom: 1px solid whitesmoke;
+}
+
+#status-question-container {
+    /* border: 1px solid yellow; */
+    align-items: center;
+    text-align: center;
+    font-family: "Georgia", cursive;
+    font-size: 17px;
+}
+
+.select-box {
+    cursor: pointer;
+    position: relative;
+    left: 20%;
+    bottom: 25px;
+    color: whitesmoke;
+    background-color: black;
+    display: block;
+    font: 400 17px/2em 'Source Sans Pro', sans-serif;
+    background: transparent;
+}
+
+.select-box:hover {
+    background: whitesmoke;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 8);
+}
+
+.guest-button input {
+    cursor: pointer;
+    margin: 5px;
+    height: 25px;
+    width: 7%;
+    background-color: transparent;
+    color: white;
+}
+
+#confirm-status {
+    position: relative;
+    left: 30%;
+}
+
+#confirm-status:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+#delete-guest:hover {
+    background-color: red;
+}
+
+#no-guests-message {
+    height: 50%;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#no-guests-message h1 {
+    border: 1px white solid;
+    position: relative;
+    top: 35%;
+    font-size: 65px;
+}
+
+#no-guests-message h5 {
+    font-size: 25px;
+    color: whitesmoke
+}
+
+#no-guests-message h5:hover {
+    color: greenyellow;
+}
+
+/* Display all weddings - admin */
+
+#weddings-container {
+    height: 55%;
+    color: whitesmoke;
+    overflow: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#weddings-container h2 {
+    /* border: 1px solid yellow; */
+    height: fit-content;
+    width: fit-content;
+}
+
+#all-weddings {
+    /* border:1px solid yellow; */
+    overflow: auto;
+    overflow-x: auto;
+    position: relative;
+    height: 55%;
+    width: 75%;
+    bottom: 5%;
+    left: 10%;
+}
+
+#wedding-name {
+    position: relative;
+    text-align: center;
+    column-fill: auto;
+    background-color: whitesmoke;
+    border-radius: 100px 5px;
+    top: 10%;
+}
+
+#wedding-name:hover {
+    background-color: transparent;
+}
+
+.wedding h5:hover {
+    color: whitesmoke;
+}
+
+.wedding h5 {
+    color: black;
+}
+
+/* Display wedding details - admin */
+
+.wedding-details-container {
+    overflow: auto;
+    overflow-x: hidden;
+    color: whitesmoke;
+    text-align: left;
+}
+
+.wedding-details-container h1 {
+    text-align: center;
+}
+
+.wedding-details {
+    position: relative;
+}
+
+/* Display create wedding - admin */
+
+.create-wedding-container {
+    color: whitesmoke;
+    position: fixed;
+    left: 0%;
+    border-radius: 20px;
+    overflow: auto;
+    -webkit-animation-name: animation-container;
+    -webkit-animation: animation-container 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: animation-container 3s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.create-wedding-container h1 {
+    text-align: center;
+}
+
+.create-wedding {
+    position: relative;
+    display: grid;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.create-wedding-input {
+    border-radius: 20px;
+    background-color: transparent;
+    text-align: center;
+    color: whitesmoke;
+    outline: none;
+}
+
+.create-wedding-input:hover {
+    background-color: whitesmoke;
+    color: black;
+    cursor: text;
+}
+
+#create-wedding-button {
+    border: 1px solid whitesmoke;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    color: whitesmoke;
+    border-radius: 25px;
+    outline: none;
+}
+
+.wedding-details-container h5 {
+    position: relative;
+    top: 20%;
+    left: 2%;
+}
