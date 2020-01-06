@@ -2,7 +2,7 @@ import { post, remove, get } from '../../data/crud';
 
 class AuthenticationService {
     constructor() {
-        this.baseUrl = 'http://localhost:5000/auth';
+        this.baseUrl = '/auth';
         this.loginUrl = `${this.baseUrl}/login`;
         this.registerUrl = `${this.baseUrl}/admin/signup`;
         this.editWeddingUrl = `${this.baseUrl}/admin/edit`;
