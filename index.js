@@ -1,6 +1,6 @@
 const env = process.env.NODE_ENV || 'development';
 
-const config = require('./src/configuration/config')[env];
+const port = process.env.PORT || 5000
 const express = require('express');
 const app = express();
 const multer = require('multer');
@@ -43,5 +43,5 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(config.port);
-console.log(`Application listening on port ${config.port}`);
+app.listen(port);
+console.log(`Application listening on port ${port}`);
