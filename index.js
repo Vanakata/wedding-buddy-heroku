@@ -1,6 +1,7 @@
 const env = process.env.NODE_ENV || 'development';
 
-const port = process.env.PORT || 5000
+const config = require('./src/configuration/config')[env];
+const port = process.env.PORT || 5000;
 const express = require('express');
 const app = express();
 const multer = require('multer');
