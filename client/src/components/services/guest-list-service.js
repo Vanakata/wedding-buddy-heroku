@@ -2,7 +2,7 @@ import { get, post, remove } from '../../data/crud';
 
 class GuestListService {
     constructor() {
-        this.baseUrl = 'http://localhost:5000/guest-list';
+        this.baseUrl = 'https://wedding-buddy.herokuapp.com/guest-list';
         this.allGuestsUrl = `${this.baseUrl}/all/`;
         this.createGuestUrl = `${this.baseUrl}/create`;
 

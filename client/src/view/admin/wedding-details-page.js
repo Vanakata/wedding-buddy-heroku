@@ -28,7 +28,7 @@ class WeddingDetails extends Component {
   onClickHandler = () => {
     const data = new FormData();
     data.append("file", this.state.selectedFile);
-    axios.post("http://localhost:5000/upload/upload", data).then(res => {
+    axios.post("https://wedding-buddy.herokuapp.com/upload/upload", data).then(res => {
       console.log(res.statusText);
     });
   };

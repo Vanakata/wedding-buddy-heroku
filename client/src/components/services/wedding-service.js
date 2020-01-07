@@ -3,11 +3,11 @@ import { get, post, remove } from '../../data/crud';
 class WeddingService {
     constructor() {
 
-        this.baseUrl = 'http://localhost:5000/weddings';
+        this.baseUrl = 'https://wedding-buddy.herokuapp.com/weddings';
         this.allWeddingsUrl = `${this.baseUrl}/all`;
         this.editWeddingUrl = `${this.baseUrl}/edit`;
         this.deleteWeddingUrl = `${this.baseUrl}/delete/`;
-        this.userWeddingUrl='http://localhost:5000/';
+        this.userWeddingUrl='https://wedding-buddy.herokuapp.com/';
     }
     edit(id, credentials) {
         return post(`${this.editWeddingUrl}${id}`, credentials);

@@ -37,7 +37,7 @@ class UploadImage extends Component {
           files={this.state.files}
           allowMultiple={true}
           maxFiles={3}
-          server="http://localhost:5000"
+          server="https://wedding-buddy.herokuapp.com"
           oninit={() => this.handleInit()}
           onupdatefiles={fileItems => {
             // Set currently active file objects to this.state

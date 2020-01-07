@@ -1,5 +1,6 @@
 import { post, remove, get } from '../../data/crud';
 
+
 class AuthenticationService {
     constructor() {
         this.baseUrl = 'https://wedding-buddy.herokuapp.com/auth';
