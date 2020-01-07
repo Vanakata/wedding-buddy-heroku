@@ -56,7 +56,7 @@ class GuestCard extends Component {
                     throw new Error(errors)
                 } else {
 
-                    location.href = location.href;
+                    window.location.href = window.location.href;
 
 
                 }
