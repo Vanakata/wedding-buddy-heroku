@@ -41,7 +41,7 @@ require('./src/configuration/routes')(app);
 require('./src/configuration/passport')();
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build","public", "index.html"));
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 app.listen(port);
