@@ -66,7 +66,7 @@ class GuestList extends Component {
 
                             ))
                         }
-                        < p id="total-guests"> Total guests:{guests.length}</p>
+                        <p id="total-guests"> Total guests:{guests.length}</p>
                     </div>
                 </div>
             </Fragment >
@@ -83,7 +83,6 @@ class GuestList extends Component {
             console.log(error)
         }
     }
-}
-
+};
 
 export default GuestList;

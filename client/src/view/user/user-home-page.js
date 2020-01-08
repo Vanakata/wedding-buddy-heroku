@@ -38,7 +38,7 @@ class UserHomePage extends React.Component {
       console.log(error);
     }
   }
-}
+};
 const UserHomePageWithCotext = props => {
   return (
     <UserConsumer>

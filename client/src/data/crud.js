@@ -1,6 +1,7 @@
 function request(method) {
     const getAuthHeader = () => {
         const token = window.localStorage.getItem("auth_token");
+        
         return (token && token.length)
             ?
             {
